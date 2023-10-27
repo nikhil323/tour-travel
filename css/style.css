@@ -1,46 +1,43 @@
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-
-*/
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: inherit;
 }
+
+
 
 body {
     font-family: "Lato", sans-serif;
-    font-size: 16;
+    /* font-size: 16; */
     font-weight: 400;
     line-height: 1.7;
-    /* padding: 30px; */
+    /* padding: 3rem; */
     color: #777;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 .header {
     height: 100vh;
     background-image: url(../img/karsten.jpg);
-    /* background-image: url(../img/neom-d.jpg); */
     background-size: cover;
-    background-position: center;
+    background-position: top;
     /* clip-path: polygon(0 0 , 100% 0, 100% 75vh, 0 100%); */
     position: relative;
 }
 
 .header-logo {
     position: absolute;
-    top: 30px;
-    left: 30px;
+    top: 3rem;
+    left: 3rem;
 }
 
 .header-box{
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
@@ -53,61 +50,89 @@ body {
 .header-title-main {
     display: block;
     text-transform: uppercase;
-    letter-spacing: 30px;
-    font-size: 60px;
+    letter-spacing: 3rem;
+    font-size: 6rem;
     font-weight: 400;
-    text-wrap: nowrap;
+    /* text-wrap: nowrap; */
     animation: moveFromLeft 1s ease-out;
 }
 
 .header-title-sub {
     display: block;
-    letter-spacing: 26.5px;
+    letter-spacing: 2.65rem;
     animation: moveFromRight 1s ease-out;
 }
 
 .btn {
-    height: 60px;
+    height: 6rem;
     text-transform: uppercase;
-    padding: 15px;
+    padding: 1.5rem 3rem;
     text-decoration: none;
     display: inline-block;
-    border-radius: 100px;
-    margin-top: 20px;
+    border-radius: 10rem;
+    margin-top: 2rem;
     transition: all 0.3s;
+    /* font-size: large; */
+    font-size: 1.7rem;
 }
 
 
 .btn-green {
     background-color: #fff;
     color: #369b29;
+    position: relative;
 }
 
-/* .btn:link, .btn:visited {
-    color: #777
-} */
+.btn-animation{
+    animation: moveFromBottom .5s ease-out 0.5s;
+    animation-fill-mode: backwards;
+}
 
 .btn:hover {
-    transform: translateY(-5px);
+    transform: translateY(-.5rem);
     background-color: #70bd66;
     color: #fff;
+    box-shadow: 0 1rem 2rem rgba(255, 255, 255, 0.2);
 }
 
 .btn:active {
-    transform: translateY(-1px);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(255, 255, 255, 0.2);
 }
+
+/* .btn-green::after {
+    background-color: #70bd66;
+} */
+
+/* .btn-animation::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .4s;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */
+
+/* .btn-animation:active::after{
+    transform: scaleX(1.5);
+    opacity: 0;
+} */
 
 /* animations */
 
 @keyframes moveFromLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
     }
 
     70% {
         opacity: 0.5;
-        transform: translate(10px);
+        transform: translate(1rem);
     }
     100% {
         opacity: 1;
@@ -118,14 +143,25 @@ body {
 @keyframes moveFromRight {
     0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
     }
 
     70% {
         opacity: 0.5;
-        transform: translate(-10px);
+        transform: translate(-1rem);
     }
 
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
     100% {
         opacity: 1;
         transform: translate(0);
