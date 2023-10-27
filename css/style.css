@@ -29,13 +29,13 @@ html {
     position: relative;
 }
 
-.header-logo {
+.header__logo {
     position: absolute;
     top: 3rem;
     left: 3rem;
 }
 
-.header-box{
+.header__box{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -43,11 +43,11 @@ html {
     text-align: center;
 }
 
-.header-title {
+.header__title {
     color: #fff;
 }
 
-.header-title-main {
+.header__title--main {
     display: block;
     text-transform: uppercase;
     letter-spacing: 3rem;
@@ -57,7 +57,7 @@ html {
     animation: moveFromLeft 1s ease-out;
 }
 
-.header-title-sub {
+.header__title--sub {
     display: block;
     letter-spacing: 2.65rem;
     animation: moveFromRight 1s ease-out;
@@ -77,13 +77,13 @@ html {
 }
 
 
-.btn-green {
+.btn__green {
     background-color: #fff;
     color: #369b29;
     position: relative;
 }
 
-.btn-animation{
+.btn__animation{
     animation: moveFromBottom .5s ease-out 0.5s;
     animation-fill-mode: backwards;
 }
